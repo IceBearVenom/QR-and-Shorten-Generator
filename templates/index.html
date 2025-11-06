@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shorten and QR</title>
+    <link rel="stylesheet" href="../static\styles\style.css">
+</head>
+<body>
+    <div class="container-selector">
+        {% block content %}
+        <div class="buttons">
+            <button class="select-btn" id="url" onclick="clickDisplay(this)">Shorten URL</button>
+            <button class="select-btn" id="qr" onclick="clickDisplay(this)">QR Generator</button>
+        </div>
+        <div class="main-container" id="shorten-url">
+            <h3>Input Link</h3>
+            <!-- Forms -->
+            <form action="/generate-shorten" method="post" enctype="multipart/form-data">
+                <input type="url" name="data-shorten" id="text" required placeholder="https://example.com">
+                <button type="submit">Generate</button>
+            </form>
+        </div>
+        <div class="main-container" id="qr-generator">
+            <h3>Input Link</h3>
+            <!-- Forms -->
+            <form id="qrForm">
+                <input type="url" name="data-qr" id="text" required placeholder="https://example.com">
+                <button type="submit">Generate</button>
+            </form>
+        </div>
+        {% endblock %}
+    </div>
+    <!-- Scripts -->
+     <script src="../static/scripts/script.js"></script>
+</body>
+</html>
