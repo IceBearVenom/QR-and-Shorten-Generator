@@ -1,12 +1,20 @@
 body {
     font-family: 'Segoe UI', sans-serif;
-    background: #f2f4f8;
+    background: #0F0F0F;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
 }
 
+.container-selector {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    background-color: #f2f4f8;
+    padding: 24px;
+    border-radius: 10px;
+}
 .container-selector .buttons {
     display: flex;
     justify-content: space-evenly;
@@ -14,12 +22,13 @@ body {
     margin: 24px;
 }
 .container-selector .buttons button {
+    cursor: pointer;
     border: none;
     border-radius: 10px;
     padding: 16px;
     font-size: 24px;
     font-weight: bolder;
-    background-color: #007bff;
+    background-color: #005B41;
     color: #f2f4f8;
 }
 .container-selector .buttons button:hover {
@@ -39,24 +48,81 @@ body {
     padding: 40px;
     border-radius: 15px;
     text-align: center;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    background: white;
+    box-shadow: 0 4px 10px rgba(0,0,0,1.0);
+    background: #232D3F;
 }
-input[type="file"]::file-selector-button {
+.main-container h2 {
+    color: #f2f4f8;
+}
+
+.main-container input {
     border: none;
-    padding: 5px 10px;
-    border-radius: 5px;
-    background-color: lightgreen;
-}
-input[type="file"]::file-selector-button:hover {
-    background-color: darkolivegreen;
-    color: ghostwhite;
+    border-radius: 10px;
+    padding: 8px;
+    font-size: 16px;
 }
 .main-container button {
-    background: #007bff;
+    background: #005B41;
     color: white;
     border: none;
     padding: 10px 20px;
     border-radius: 8px;
     cursor: pointer;
+}
+
+.main-container button:hover {
+    background-color: cadetblue;
+}
+
+.output {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:  24px;
+    padding: 16px;
+    font-size: 20px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.output p {
+    border-radius: 10px;
+    padding: 8px 16px;
+    background-color: #bfcae0;
+    box-shadow: 0 0px 4px 1px inset rgba(0,0,0, 1.0);
+}
+
+.output i {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    padding: 8px 8px;
+    border-radius: 10px;
+    color: #f2f4f8;
+    background-color: #005B41;
+    box-shadow: 0 3px 5px 1px rgba(0,0,0,1.0);
+}
+
+.output i:hover {
+    background-color: cadetblue;
+}
+
+.output img {
+    width: 200px;
+}
+
+.output a {
+    cursor: pointer;
+    text-decoration: none;
+    height: fit-content;
+    padding: 8px;
+    border: none;
+    border-radius: 10px;
+    background-color: #005B41;
+    color: #f2f4f8;
+}
+
+.output a:hover {
+    background-color: cadetblue;
 }

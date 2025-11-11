@@ -29,7 +29,7 @@ def home():
 @views.route("/generate-shorten", methods=['GET', 'POST'])
 def generate_shorten():
     # Get Shorten Value
-    data_shorten = request.form['data-shorten']
+    data_shorten = request.args.get("data_shorten")
     # Shorten it
     short_id = generate_short_url()
     # Add to Database
